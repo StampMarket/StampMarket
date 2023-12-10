@@ -23,6 +23,10 @@ public class Result<T> implements Serializable {
         return new Result<>(200, "OK", null);
     }
 
+    public static <T> Result<T> success(String msg){
+        return new Result<>(200, msg, null);
+    }
+
     public static <T> Result<T> success(T data) {
         return new Result<>(200, "OK", data);
     }
