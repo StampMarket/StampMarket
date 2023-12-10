@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: user
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/stamp_market
+    username: root
+    password: root
