@@ -1,4 +1,4 @@
-package com.stampmarket;
+package com.stampmarket.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
