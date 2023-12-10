@@ -32,8 +32,9 @@ public class JwtTool {
 
     /**
      * 解析JWT
+     *
      * @param secretKey 秘钥
-     * @param token 待解析的token
+     * @param token     待解析的token
      * @return 负载信息
      */
     public static Claims parseToken(String secretKey, String token) {
