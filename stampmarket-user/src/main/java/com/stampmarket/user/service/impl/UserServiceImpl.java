@@ -38,4 +38,19 @@ public class UserServiceImpl implements UserService {
         String token = JwtTool.getToken("stamp_market", 3600_000, claims);
         return new UserLoginVO(user.getId(), user.getUsername(), token, user.getBalance());
     }
+
+    public void recharge(Integer userId, Integer amount) {
+        userDao.updateBalance(userId, amount);
+    }
+
+    public void deduct(Integer id, Integer amount, String password) {
+        User user = userDao.getById(id);
+        if(!user.getPassword().equals(password)) {
+            throw new CustomException("密码错误");
+        }
+        if(user.getBalance() < amount) {
+            throw new CustomException("余额不足");
+        }
+        userDao.updateBalance(id, -amount);
+    }
 }

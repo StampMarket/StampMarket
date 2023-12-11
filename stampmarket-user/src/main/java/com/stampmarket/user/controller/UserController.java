@@ -7,10 +7,7 @@ import com.stampmarket.user.pojo.UserLoginVO;
 import com.stampmarket.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
@@ -31,5 +28,19 @@ public class UserController {
         log.info("用户登录：{}", userLoginDTO);
         UserLoginVO userLoginVO = userService.login(userLoginDTO);
         return Result.success(userLoginVO);
+    }
+
+    @PutMapping("/recharge")
+    public Result<Object> recharge(Integer id, Integer amount) {
+        log.info("用户充值：id={}, amount={}", id, amount);
+        userService.recharge(id, amount);
+        return Result.success();
+    }
+
+    @PutMapping("/deduct")
+    public Result<Object> deduct(Integer id, Integer amount, String password) {
+        log.info("用户扣款：id={}, amount={}, password={}", id, amount, password);
+        userService.deduct(id, amount, password);
+        return Result.success();
     }
 }
