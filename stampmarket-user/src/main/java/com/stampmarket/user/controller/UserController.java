@@ -1,7 +1,6 @@
 package com.stampmarket.user.controller;
 
 import com.stampmarket.common.pojo.Result;
-import com.stampmarket.user.exception.CustomException;
 import com.stampmarket.user.pojo.User;
 import com.stampmarket.user.pojo.UserLoginDTO;
 import com.stampmarket.user.pojo.UserLoginVO;
