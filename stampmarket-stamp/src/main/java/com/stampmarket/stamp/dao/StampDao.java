@@ -1,9 +1,9 @@
 package com.stampmarket.stamp.dao;
 
 import com.stampmarket.stamp.pojo.Stamp;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.*;
+
+import java.util.List;
 
 @Mapper
 public interface StampDao {
@@ -13,4 +13,10 @@ public interface StampDao {
 
     @Delete("delete from stamp where id = #{id}")
     void delete(Integer id);
+
+    @Results(
+            @Result(column = "publish_date", property = "publishDate")
+    )
+    @Select("select * from stamp")
+    List<Stamp> listAllStamp();
 }

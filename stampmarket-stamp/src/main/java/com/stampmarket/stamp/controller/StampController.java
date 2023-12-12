@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+import java.util.List;
 
 
 @RequiredArgsConstructor
@@ -28,5 +29,11 @@ public class StampController {
         log.info("deleting id=" + id.toString());
         stampService.deleteStamp(id);
         return Result.success();
+    }
+
+    @GetMapping("/list")
+    public Result<List<Stamp>> listAllStamp() {
+        log.warn("Listing all stamps, may take a long time");
+        return Result.success(stampService.listAllStamp());
     }
 }

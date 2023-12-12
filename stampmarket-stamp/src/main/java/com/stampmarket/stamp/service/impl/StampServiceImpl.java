@@ -24,4 +24,9 @@ public class StampServiceImpl implements StampService {
     public void deleteStamp(Integer id) {
         stampDao.delete(id);
     }
+
+    @Override
+    public List<Stamp> listAllStamp() {
+        return stampDao.listAllStamp();
+    }
 }

@@ -9,6 +9,6 @@ import java.util.List;
 public interface StampService {
 //    List<Stamp> listAllStamps();
     void addStamp(Stamp stamp);
-
     void deleteStamp(Integer id);
+    List<Stamp> listAllStamp();
 }
