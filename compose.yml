@@ -16,3 +16,5 @@ services:
       ./stampmarket-stamp
     ports:
       - 9002:9002
+    depends_on:
+      - mysql
