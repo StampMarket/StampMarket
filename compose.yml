@@ -9,3 +9,8 @@ services:
       ./stampmarket-user
     ports:
       - 9001:9001
+  stamp:
+    build:
+      ./stampmarket-stamp
+    ports:
+      - 9002:9002
