@@ -1,12 +1,11 @@
 package com.stampmarket.stamp.service;
 
 import com.stampmarket.stamp.pojo.Stamp;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Mapper
+@Service
 public interface StampService {
 //    List<Stamp> listAllStamps();
     void addStamp(Stamp stamp);
