@@ -29,4 +29,9 @@ public class StampServiceImpl implements StampService {
     public List<Stamp> listAllStamp() {
         return stampDao.listAllStamp();
     }
+
+    @Override
+    public void updateStampPrice(Integer id, Double price) {
+        stampDao.updatePrice(id, price);
+    }
 }

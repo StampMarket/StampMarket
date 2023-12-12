@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 
@@ -35,5 +34,12 @@ public class StampController {
     public Result<List<Stamp>> listAllStamp() {
         log.warn("Listing all stamps, may take a long time");
         return Result.success(stampService.listAllStamp());
+    }
+
+    @PutMapping("/modify/{id}")
+    public Result<Object> modify(@PathVariable Integer id, @RequestParam Double price) {
+        log.info("modifying id=" + id.toString());
+        stampService.updateStampPrice(id, price);
+        return Result.success();
     }
 }
