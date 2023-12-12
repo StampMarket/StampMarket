@@ -1,0 +1,10 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: stamp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql:3306/stamp_market
+    username: root
+    password: root
