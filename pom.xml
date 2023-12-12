@@ -11,6 +11,7 @@
     <modules>
         <module>stampmarket-user</module>
         <module>stampmarket-common</module>
+        <module>stampmarket-stamp</module>
     </modules>
 
     <properties>
@@ -37,8 +38,13 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>8</source> <!-- depending on your project -->
+                    <target>8</target> <!-- depending on your project -->
+                </configuration>
             </plugin>
         </plugins>
     </build>
