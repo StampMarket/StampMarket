@@ -12,6 +12,7 @@
         <module>stampmarket-user</module>
         <module>stampmarket-common</module>
         <module>stampmarket-stamp</module>
+        <module>stampmarket-order</module>
     </modules>
 
     <properties>

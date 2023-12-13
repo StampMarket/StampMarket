@@ -18,3 +18,10 @@ services:
       - 9002:9002
     depends_on:
       - mysql
+  order:
+    build:
+      ./stampmarket-order
+    ports:
+      - 9003:9003
+    depends_on:
+      - mysql
