@@ -8,3 +8,6 @@ spring:
     url: jdbc:mysql://mysql:3306/stamp_market
     username: root
     password: root
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
