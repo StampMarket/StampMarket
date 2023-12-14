@@ -18,16 +18,15 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void order(OrderDTO orderDetail) {
-        String url = "http://stamp:9002/price/" + orderDetail.getStampId();
+        String url = "http://stamp:9002/stamp/price/" + orderDetail.getStampId();
         log.info("Getting StampPrice by: " + url);
         Integer price = restTemplate.getForObject(
                 url,
                 Integer.class);
 
-        restTemplate.put("http://user:9001/deduct?id={id}&amount={amount}&password={password}",
+        restTemplate.put("http://user:9001/user/deduct?id={id}&amount={amount}&password={password}",
                 null,
                 orderDetail.getUserId(),
-                orderDetail.getCount(),
                 orderDetail.getCount() * price,
                 orderDetail.getPassword());
     }
