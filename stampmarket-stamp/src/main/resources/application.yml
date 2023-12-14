@@ -11,3 +11,11 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka:7000/eureka
+  instance:
+prefer-ip-address: true
