@@ -18,3 +18,8 @@ services:
       - 9002:9002
     depends_on:
       - mysql
+  eureka:
+    build:
+      ./stampmarket-eureka
+    ports:
+      - 7000:7000
