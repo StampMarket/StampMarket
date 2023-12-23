@@ -14,9 +14,6 @@ public interface StampDao {
     @Delete("delete from stamp where id = #{id}")
     void delete(Integer id);
 
-    @Results(
-            @Result(column = "publish_date", property = "publishDate")
-    )
     @Select("select * from stamp")
     List<Stamp> listAllStamp();
 

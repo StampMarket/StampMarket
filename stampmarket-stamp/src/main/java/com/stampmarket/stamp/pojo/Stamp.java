@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
 import java.time.LocalDate;
 
 @Data
@@ -17,5 +16,5 @@ public class Stamp {
     private Integer width;
     private Integer height;
     private LocalDate publishDate;
-    private Double price;
+    private Integer price;
 }
