@@ -13,6 +13,7 @@
         <module>stampmarket-common</module>
         <module>stampmarket-stamp</module>
         <module>stampmarket-eureka</module>
+        <module>stampmarket-gateway</module>
     </modules>
 
     <properties>

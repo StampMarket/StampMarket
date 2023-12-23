@@ -25,3 +25,10 @@ services:
       ./stampmarket-eureka
     ports:
       - 7000:7000
+  gateway:
+    build:
+      ./stampmarket-gateway
+    ports:
+      - 8222:8222
+    depends_on:
+      - eureka
