@@ -19,4 +19,7 @@ public interface StampDao {
 
     @Update("update stamp set price = #{price} where id = #{id}")
     void updatePrice(Integer id, Double price);
+
+    @Select("select price from stamp where id = #{id}")
+    Integer queryPriceForStampId(Integer id);
 }

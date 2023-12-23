@@ -25,3 +25,11 @@ services:
       ./stampmarket-eureka
     ports:
       - 7000:7000
+  order:
+    build:
+      ./stampmarket-order
+    ports:
+      - 9003:9003
+    depends_on:
+      - mysql
+      - user

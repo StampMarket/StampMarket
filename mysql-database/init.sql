@@ -9,7 +9,9 @@ create table user(
     balance int default 0
 );
 
-insert into user(id, username, password) values (1, 'tom', '123456'), (2, 'jerry', '123456');
+insert into user(id, username, password, balance) values
+(1, 'tom', '123456', 100),
+(2, 'jerry', '123456', 100);
 
 create table stamp(
     id int auto_increment primary key,

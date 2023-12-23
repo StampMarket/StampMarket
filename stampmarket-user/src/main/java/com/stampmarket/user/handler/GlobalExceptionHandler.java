@@ -24,6 +24,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler
     public Result<Object> exceptionHandler(CustomException e){
         log.info("业务异常：{}", e.getMessage());
-        return Result.error(400, e.getMessage());
+        return Result.error(e.getMessage());
     }
 }
