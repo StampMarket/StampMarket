@@ -4,9 +4,11 @@
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stampmarket-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stampmarket-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stampmarket-eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stampmarket-eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stampmarket-stamp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/stampmarket-stamp/stampmarket-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stampmarket-user/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/stampmarket-user/src/main/resources" charset="UTF-8" />
   </component>

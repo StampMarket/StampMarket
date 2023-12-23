@@ -42,4 +42,10 @@ public class StampController {
         stampService.updateStampPrice(id, price);
         return Result.success();
     }
+
+    @GetMapping("/price/{id}")
+    public Integer price(@PathVariable Integer id) {
+        log.info("querying price of stamp ID=" + id);
+        return stampService.queryStampPrice(id);
+    }
 }

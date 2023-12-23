@@ -12,6 +12,7 @@
         <module>stampmarket-user</module>
         <module>stampmarket-common</module>
         <module>stampmarket-stamp</module>
+        <module>stampmarket-order</module>
         <module>stampmarket-eureka</module>
     </modules>
 
@@ -49,6 +50,7 @@
             </plugin>
         </plugins>
     </build>
+
     <repositories>
         <repository>
             <id>spring-snapshots</id>
@@ -79,5 +81,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
 </project>
