@@ -35,8 +35,7 @@ public class UserServiceImpl implements UserService {
         }
         Map<String, Object> claims = new HashMap<>();
         claims.put("id", user.getId());
-//        String token = JwtTool.getToken("stamp_market", 3600_000, claims);
-        String token = JwtTool.getToken("stamp_market", 10, claims);
+        String token = JwtTool.getToken("stamp_market", 3600_000, claims);
         return new UserLoginVO(user.getId(), user.getUsername(), token, user.getBalance());
     }
 
