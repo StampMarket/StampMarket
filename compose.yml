@@ -20,6 +20,14 @@ services:
     depends_on:
       - mysql
       - eureka
+  stamp-spare:
+    build:
+      ./stampmarket-stamp
+    ports:
+      - 8002:9002
+    depends_on:
+      - mysql
+      - eureka
   eureka:
     build:
       ./stampmarket-eureka
