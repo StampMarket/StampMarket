@@ -1,5 +1,6 @@
 package com.stampmarket.order.service.impl;
 
+import com.stampmarket.order.client.StampClient;
 import com.stampmarket.order.dao.OrderDao;
 import com.stampmarket.order.pojo.OrderDTO;
 import com.stampmarket.order.service.OrderService;
@@ -15,14 +16,16 @@ import com.stampmarket.common.pojo.Result;
 public class OrderServiceImpl implements OrderService {
     private final OrderDao orderDao;
     private final RestTemplate restTemplate;
+    private final StampClient stampClient;
 
     @Override
     public void order(OrderDTO orderDetail) {
         String url = "http://stamp:9002/stamp/price/" + orderDetail.getStampId();
         log.info("Getting StampPrice by: " + url);
-        Integer price = restTemplate.getForObject(
-                url,
-                Integer.class);
+//        Integer price = restTemplate.getForObject(
+//                url,
+//                Integer.class);
+        Integer price = stampClient.getPriceForStampId(orderDetail.getStampId());
 
         restTemplate.put("http://user:9001/user/deduct?id={id}&amount={amount}&password={password}",
                 null,
