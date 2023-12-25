@@ -14,6 +14,11 @@ services:
       ./stampmarket-stamp
     ports:
       - 9002:9002
+  stamp-spare:
+    build:
+      ./stampmarket-stamp
+    ports:
+      - 8002:9002
   eureka:
     build:
       ./stampmarket-eureka
