@@ -9,17 +9,11 @@ services:
       ./stampmarket-user
     ports:
       - 9001:9001
-    depends_on:
-      - mysql
-      - eureka
   stamp:
     build:
       ./stampmarket-stamp
     ports:
       - 9002:9002
-    depends_on:
-      - mysql
-      - eureka
   eureka:
     build:
       ./stampmarket-eureka
@@ -30,6 +24,3 @@ services:
       ./stampmarket-order
     ports:
       - 9003:9003
-    depends_on:
-      - mysql
-      - user
