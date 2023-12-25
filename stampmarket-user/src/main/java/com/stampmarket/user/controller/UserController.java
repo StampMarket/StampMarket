@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/user")
 @Slf4j
 @RequiredArgsConstructor
 public class UserController {
