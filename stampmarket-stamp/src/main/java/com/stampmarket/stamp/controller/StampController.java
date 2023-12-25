@@ -13,7 +13,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @Slf4j
-@RequestMapping("/stamp")
 public class StampController {
     private final StampService stampService;
 

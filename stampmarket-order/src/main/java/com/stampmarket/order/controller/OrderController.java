@@ -14,11 +14,10 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-@RequestMapping("/order")
 public class OrderController {
     private final OrderService orderService;
 
-    @PutMapping("/")
+    @PutMapping()
     public Result<Object> order(@RequestBody OrderDTO orderDTO) {
         log.info("Ordering with detail: " + orderDTO);
         orderService.order(orderDTO);
