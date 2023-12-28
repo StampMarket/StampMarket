@@ -12,4 +12,5 @@ public interface StampService {
     void deleteStamp(Integer id);
     List<Stamp> listAllStamp();
     void updateStampPrice(Integer id, Double price);
+    Integer queryStampPrice(Integer id);
 }

@@ -13,7 +13,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @Slf4j
-@RequestMapping("/stamp")
 public class StampController {
     private final StampService stampService;
 
@@ -41,5 +40,11 @@ public class StampController {
         log.info("modifying id=" + id.toString());
         stampService.updateStampPrice(id, price);
         return Result.success();
+    }
+
+    @GetMapping("/price/{id}")
+    public Integer price(@PathVariable Integer id) {
+        log.info("querying price of stamp ID=" + id);
+        return stampService.queryStampPrice(id);
     }
 }

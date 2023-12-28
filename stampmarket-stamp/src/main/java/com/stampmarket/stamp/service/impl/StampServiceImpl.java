@@ -34,4 +34,9 @@ public class StampServiceImpl implements StampService {
     public void updateStampPrice(Integer id, Double price) {
         stampDao.updatePrice(id, price);
     }
+
+    @Override
+    public Integer queryStampPrice(Integer id) {
+        return stampDao.queryPriceForStampId(id);
+    }
 }
