@@ -12,6 +12,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
+@CrossOrigin
 @Slf4j
 public class StampController {
     private final StampService stampService;
