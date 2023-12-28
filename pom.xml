@@ -14,6 +14,7 @@
         <module>stampmarket-stamp</module>
         <module>stampmarket-order</module>
         <module>stampmarket-eureka</module>
+        <module>stampmarket-gateway</module>
     </modules>
 
     <properties>

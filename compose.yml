@@ -29,3 +29,8 @@ services:
       ./stampmarket-order
     ports:
       - 9003:9003
+  gateway:
+    build:
+      ./stampmarket-gateway
+    ports:
+      - 8222:8222
