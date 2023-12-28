@@ -3,6 +3,7 @@ package com.stampmarket.gateway.filter;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.stampmarket.common.utils.JwtTool;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  * 权限过滤器
  */
 @Component
+@Slf4j
 public class AuthFilter extends ZuulFilter {
     @Override
     public String filterType() {
@@ -39,6 +41,7 @@ public class AuthFilter extends ZuulFilter {
         }
         // 获取请求头中的token
         String token = request.getHeader("Authorization");
+        log.info("token: " + token);
         // 判断token是否为空，如果为空则拦截
         if (token == null || token.isEmpty()) {
             // 拦截请求，不再转发
